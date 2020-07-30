@@ -1,3 +1,5 @@
+var score = 0;
+
 // Add covid to the screen at random
 function addCovid() {
 // create a new element and store it in the covid variable
@@ -25,6 +27,7 @@ function addCovid() {
     function dead(element) {
 	// pegar o elemento covid e remover da tela
     document.body.removeChild(element);
+    incrementScore();
 }
 
 // start the game when the page loads
@@ -37,4 +40,9 @@ function addCovid() {
 
         // appear with the information
     document.querySelector('.info').style.display = 'flex';
+}
+
+function incrementScore() {
+    score++;
+    document.getElementById('score').innerText = score;
 }

@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Dead Covid</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <link rel="icon" type="image/png" href="assets/icon.png"> <!-- Icon -->
     <link rel="stylesheet" type="text/css" href="style.css"> <!-- My CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;&display=swap" rel="stylesheet">  <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;&display=swap" rel="stylesheet"> <!-- Font -->
 </head>
+
 <body>
-    <div class="start" onclick="start()"><h1>Começar o Jogo</h1></div>
-    <div class="info"><p>Clique no máximo de corona que conseguir !!!</p></div>
+    <div class="start" onclick="start()">
+        <h1>Começar o Jogo</h1>
+    </div>
+    <div class="score">
+        <h3 class="score-title">Pontuação:</h3>
+        <h3 class="score-number" id="score"></h3>
+    </div>
+    <div class="info">
+        <p>Clique no máximo de corona que conseguir !!!</p>
+    </div>
     <script src="script.js"></script> <!-- Inject scripts -->
 </body>
+
 </html>

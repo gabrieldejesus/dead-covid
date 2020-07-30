@@ -70,4 +70,17 @@ body {
     background-image:url('assets/covid.svg');
 }
 
+.score {
+    color: white;
+
+}
+
+.score-title {
+    float: left;
+    margin-right: 15px;
+}
+
+.score-number {
+    float: right;
+}
 
