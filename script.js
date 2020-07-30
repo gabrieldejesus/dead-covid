@@ -1,40 +1,40 @@
-// Adicionar covid na tela aleatoriamente
+// Add covid to the screen at random
 function addCovid() {
-	// criar um elemento novo e armazenar na variavel covid
+// create a new element and store it in the covid variable
     const covid = document.createElement("div");
-    // adicionar o atributo class na div criada e adicionar o valor covid
+        // add the class attribute to the created div and add the covid value
     covid.setAttribute("class", "covid")
 
-    // gerar numero aleatorio de 0 a 500 e usar o floor para transformar ele em um número inteiro
+        // generate a random number from 0 to 500 and use the floor to transform it into an integer
     const position1 = Math.floor(Math.random() * 800) // posição 1: x
     const position2 = Math.floor(Math.random() * 400) // posição 2: y
 
-    // posicionar a div covid em um ponto aleatorio da tela 
+        // position the covid div at a random point on the screen
     covid.setAttribute("style", "left:"+position1+"px;top:"+position2+"px;");
 
-    // Ação de click para matar o covid
-    // this: paramentro para saber que se trata do própio objeto
+        // Click action to kill the covid
+        // this: parameter to know that it is the object itself
     covid.setAttribute("onclick", "dead(this)");
 
-    // Colocar na tela o covid
-    // appendChild: Pegar o conteudo que já está no site e adicionar um elemento novo
+        // Place the covid on the screen
+        // appendChild: Take the content that is already on the site and add a new element
     document.body.appendChild(covid);
 }
 
-// Função para matar o covid
-function dead(element) {
+// Function to kill the covid
+    function dead(element) {
 	// pegar o elemento covid e remover da tela
     document.body.removeChild(element);
 }
 
-// iniciar o jogo quando a página carregar
-function start() {
-	// setar um timer no javascript para que de 1 em 1 segundo ele execute a função addCovid()
+// start the game when the page loads
+    function start() {
+// set a timer in javascript so that every 1 second it executes the addCovid () function
     setInterval(addCovid, 1000);
 
-    // sumir com o botão de começar
+        // disappear with the start button
     document.querySelector('.start').style.display = 'none';
 
-    // aparecer com as informação
+        // appear with the information
     document.querySelector('.info').style.display = 'flex';
 }
