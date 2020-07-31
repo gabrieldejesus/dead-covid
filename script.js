@@ -1,48 +1,51 @@
-var score = 0;
+const c = (el)=>document.querySelector(el); // return item
 
-// Add covid to the screen at random
+let form = c("#form");
+let field = c('#field').value;
+let covids = 0;
+let score = 0;
+
+// add covid in screen
 function addCovid() {
-// create a new element and store it in the covid variable
     const covid = document.createElement("div");
-        // add the class attribute to the created div and add the covid value
     covid.setAttribute("class", "covid")
 
-        // generate a random number from 0 to 500 and use the floor to transform it into an integer
-    const position1 = Math.floor(Math.random() * 800) // posição 1: x
-    const position2 = Math.floor(Math.random() * 400) // posição 2: y
+    const position1 = Math.floor(Math.random() * 800) // position 1: x
+    const position2 = Math.floor(Math.random() * 400) // position 2: y
 
-        // position the covid div at a random point on the screen
     covid.setAttribute("style", "left:"+position1+"px;top:"+position2+"px;");
 
-        // Click action to kill the covid
-        // this: parameter to know that it is the object itself
     covid.setAttribute("onclick", "dead(this)");
-
-        // Place the covid on the screen
-        // appendChild: Take the content that is already on the site and add a new element
-    document.body.appendChild(covid);
+    c('main').appendChild(covid);
+    covids++;
+    document.getElementById('covids').innerHTML = `${covids}`;
 }
-
-// Function to kill the covid
-    function dead(element) {
-	// pegar o elemento covid e remover da tela
-    document.body.removeChild(element);
+// kill covid
+function dead(element) {
+    c('main').removeChild(element);
     incrementScore();
+    covids--;
 }
 
-// start the game when the page loads
-    function start() {
-// set a timer in javascript so that every 1 second it executes the addCovid () function
+// start game
+function start() {
     setInterval(addCovid, 1000);
+    c('h1').style.display = 'none';
+    c('form').style.display = 'none';
+    c('main').style.background = '#262D37';
+    c('aside').style.display = 'flex';
+    c('.info').style.display = 'flex';
 
-        // disappear with the start button
-    document.querySelector('.start').style.display = 'none';
-
-        // appear with the information
-    document.querySelector('.info').style.display = 'flex';
 }
 
+// getting name for user
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('name').innerHTML = `Vamos lá <span>${field}</span> você consegue!`;
+});
+
+// score
 function incrementScore() {
     score++;
-    document.getElementById('score').innerText = score;
+    document.getElementById('scores').innerHTML = score;
 }

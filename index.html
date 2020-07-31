@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <title>Dead Covid</title>
@@ -9,19 +8,43 @@
     <link rel="stylesheet" type="text/css" href="style.css"> <!-- My CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;&display=swap" rel="stylesheet"> <!-- Font -->
 </head>
-
 <body>
-    <div class="start" onclick="start()">
-        <h1>Começar o Jogo</h1>
-    </div>
-    <div class="score">
-        <h3 class="score-title">Pontuação:</h3>
-        <h3 class="score-number" id="score"></h3>
-    </div>
-    <div class="info">
-        <p>Clique no máximo de corona que conseguir !!!</p>
-    </div>
+    <main>
+        <div id="name"></div>
+        <h1>DEAD COVID!</h1>
+        <form method="POST" id="form">
+            <input type="text" placeholder="Digite seu nome..." id="field" autofocus required/>
+            <button onclick="start()" class="start">Começar o Jogo</button>
+        </form>
+
+        <div class="info">
+            <p>Clique no máximo de corona que conseguir !!!</p>
+        </div> 
+    </main>
+    <aside>
+        <div class="container">
+            <div class="score column">
+                <label>Pontuação</label>
+                <div id="scores">0</div>
+            </div>
+            <div class="covids column">
+                <label>Covids</label>
+                <div id="covids">0</div>
+            </div>
+        </div>
+    </aside>
     <script src="script.js"></script> <!-- Inject scripts -->
 </body>
 
 </html>
+
+
+<!-- <div class="start" onclick="start()">
+    <h1>Começar o Jogo</h1>
+</div>
+<div class="score">
+    <h3 class="score-title">Pontuação:</h3>
+    <h3 class="score-number" id="score"></h3>
+</div>
+
+-->
