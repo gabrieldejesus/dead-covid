@@ -1,7 +1,7 @@
 const c = (el)=>document.querySelector(el); // return item
 
 let form = c("#form");
-let field = c('#field').value;
+let field = c('#field');
 let covids = 0;
 let score = 0;
 
@@ -41,7 +41,7 @@ function start() {
 // getting name for user
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    document.getElementById('name').innerHTML = `Vamos lá <span>${field}</span> você consegue!`;
+    document.getElementById('name').innerHTML = `Vamos lá <span>${field.value}</span> você consegue!`;
 });
 
 // score
