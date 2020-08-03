@@ -1,6 +1,5 @@
 > ⚰️ Click and kill the covid
 
-![](assets/web-preview.gif)
 
 ## Deployment in
 https://devgabrieldejesus.github.io/dead-covid
