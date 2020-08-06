@@ -1,4 +1,4 @@
-> ⚰️ Click and kill the covid
+⚰️ Click and kill the covid
 
 ![](assets/web-preview.gif)
 
