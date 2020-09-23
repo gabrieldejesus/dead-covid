@@ -1,3 +1,5 @@
+# Dead Covid
+
 ⚰️ Click and kill the covid
 
 ![](assets/web-preview.gif)
