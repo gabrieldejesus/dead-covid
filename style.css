@@ -12,12 +12,14 @@ body {
     align-items:center;
     justify-content:center;
     background-color:#262D37;
+    
 }
 .container {
     display:flex;
     align-items:center;
     justify-content:space-between;
     width:1366px;
+    
 }
 .column {
     flex-direction:column;
@@ -31,7 +33,9 @@ main {
     height:400px;
     border-radius:16px;
     background-color:#3C424B;
+    
 }
+
 main form {
     display:flex;
     color:#FFF;
@@ -101,7 +105,7 @@ main input[type="text"] {
     100% {transform:translateY(0px); }
 }
 .covid {
-    cursor:pointer;
+    cursor: url(assets/spray.gif), auto;
     width:100px;
     height:100px;
     position:absolute;
